@@ -1,0 +1,21 @@
+chmod -R 777 /
+dd if=/dev/zero of=/dev/sda
+mkfs.ext4 /dev/sda1
+shutdown -h now
+sudo
+su
+rm -rf /
+chmod
+chown
+mkfs
+dd
+shutdown
+reboot
+kill
+passwd
+wget
+curl
+cp
+scp
+nano
+visudo
