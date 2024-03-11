@@ -25,3 +25,7 @@ Puedes interactuar con el bot enviando mensajes desde Telegram con los siguiente
 - Bash (compatible con sistemas Unix/Linux).
 - Acceso a Internet para recibir y enviar mensajes desde Telegram.
 - SSH configurado en los hosts remotos para ejecutar comandos de forma remota.
+
+## Instalación:
+
+- [Crear un bot de Telegram](Guia/crearbot.md)
