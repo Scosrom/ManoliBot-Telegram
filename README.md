@@ -1,16 +1,16 @@
 # ManoliBot-Telegram
 
-Este proyecto es un bot de Telegram desarrollado en Bash que permite ejecutar comandos en el servidor local y en hosts específicos a través de mensajes enviados desde Telegram.
-
+ManoliBot es un bot de Telegram programado en Bash diseñado para simplificar la gestión y control de servidores a través de la ejecución remota de comandos. Al integrarse con la plataforma de mensajería Telegram, ManoliBot proporciona una interfaz accesible y fácil de usar que permite a los usuarios enviar comandos y recibir resultados de forma rápida y conveniente.
 
 ## Características
-- Interfaz de Telegram: ManoliBot se integra con Telegram, lo que permite a los usuarios enviar comandos desde la comodidad de la aplicación de mensajería Telegram.
 
-- Ejecución de comandos remotos: Permite ejecutar comandos en hosts remotos a través de SSH, lo que facilita la administración y el control de múltiples servidores desde un único punto de acceso.
+**- Interfaz de Telegram:** ManoliBot se integra con Telegram, lo que permite a los usuarios enviar comandos desde la comodidad de la aplicación de mensajería Telegram.
+
+**- Ejecución de comandos remotos:** Permite ejecutar comandos en hosts remotos a través de SSH, lo que facilita la administración y el control de múltiples servidores desde un único punto de acceso.
   
-- Seguridad: El bot incluye una lista de comandos prohibidos para evitar la ejecución de acciones peligrosas. Además, solo acepta comandos de usuarios autorizados mediante su chat ID en Telegram.
+**- Seguridad:** El bot incluye una lista de comandos prohibidos para evitar la ejecución de acciones peligrosas. Además, solo acepta comandos de usuarios autorizados mediante su chat ID en Telegram.
   
-- Gestión de hosts: Los hosts disponibles para ejecución remota se gestionan mediante un archivo de texto, lo que permite una fácil configuración y ampliación del conjunto de hosts.
+**- Gestión de hosts:** Los hosts disponibles para ejecución remota se gestionan mediante un archivo de texto, lo que permite una fácil configuración y ampliación del conjunto de hosts.
 
 ## Instrucciones de Uso
 
