@@ -29,3 +29,4 @@ Puedes interactuar con el bot enviando mensajes desde Telegram con los siguiente
 ## Instalación:
 
 - [Crear un bot de Telegram](Guia/crearbot.md)
+- [Instalación ManoliBot](Guia/instalacion.md)
