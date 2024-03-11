@@ -39,7 +39,7 @@ execute_command_on_host() {
     local result
 
     # Verificar si el host está en la lista de hosts disponibles
-    if grep -Fxq "$host" "/opt/ManoliBot/hosts.txt"; then
+    if grep -Fxq "$host" "/opt/ManoliBot/hosts/hosts.txt"; then
         result=$(ssh "$host" "$command" 2>&1)
         send_message "Resultado de ejecución del comando '$command' en $host: $result"
     else
