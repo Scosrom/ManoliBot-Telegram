@@ -2,6 +2,8 @@
 
 ![image](https://github.com/Scosrom/ManoliBot-Telegram/assets/114906778/95efc324-04a8-4d5e-a96e-73e714522579)
 
+Este repositorio proporciona una guía paso a paso sobre cómo crear un bot de Telegram utilizando BotFather. Sigue las instrucciones detalladas a continuación para configurar tu propio bot de Telegram y obtener el token de autenticación necesario para comenzar a usarlo.
+
 
 1. **Abrir la Aplicación de Mensajería Telegram:**
    - Inicie la aplicación de Telegram en su escritorio o dispositivo móvil.
