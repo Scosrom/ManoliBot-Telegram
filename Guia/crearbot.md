@@ -1,4 +1,4 @@
-### Creación de un Telegram Bot con BotFather
+# Creación de un Telegram Bot con BotFather
 
 ![image](https://github.com/Scosrom/ManoliBot-Telegram/assets/114906778/95efc324-04a8-4d5e-a96e-73e714522579)
 
@@ -24,8 +24,8 @@
    - Una vez que haya creado el bot, Telegram le proporcionará un token de autenticación.
    - Este token es esencial para acceder a la API de Telegram Bot y controlar su bot.
    - Guarde este token de forma segura, ya que será necesario para configurar y utilizar su bot.
-
-#### Comandos Destacados de BotFather:
+---
+### Comandos Destacados de BotFather:
 
 - `/newbot`: Crea un nuevo bot. BotFather solicitará un nombre para la creación del bot.
 - `/deletebot`: Elimina el bot.
