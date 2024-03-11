@@ -9,7 +9,7 @@
    - Abra una conversación con @BotFather. Puede hacerlo directamente desde [este enlace](https://t.me/BotFather) o buscándolo en la barra de búsqueda de Telegram.
 
 3. **Iniciar la Conversación:**
-   - Pulse en "Start" para iniciar la conversación con BotFather.
+   - Pulse `/Start` para iniciar la conversación con BotFather.
 
 4. **Crear un Nuevo Bot:**
    - Utilice el comando `/newbot` para crear un nuevo bot.
