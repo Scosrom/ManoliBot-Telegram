@@ -1,6 +1,6 @@
 # Configuración de ManoliBot.
 
-ManoliBot se instala en `/opt/ManoliBot' y tiene los siguientes archivos:
+ManoliBot se instala en `/opt/ManoliBot` y consta de la siguiente estructura:
 
 ## Estructura de Carpetas y Archivos
 
