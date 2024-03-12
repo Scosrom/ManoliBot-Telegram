@@ -1,4 +1,4 @@
-#!/bin/bash
+lo#!/bin/bash
 
 # Verificar si Git está instalado y, si no, instalarlo
 if ! command -v git &> /dev/null; then
@@ -59,4 +59,4 @@ sudo systemctl start manoli-bot
 
 # Notificar la finalización de la instalación
 echo "La instalación de ManoliBot se ha completado correctamente."
-echo "Ahora puedes utilizar el Bot de Telegram."ra interactuar con tu servidor."
+echo "Ahora puedes utilizar el Bot de Telegram para interactuar con tu servidor."
