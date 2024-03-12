@@ -38,4 +38,9 @@ Puedes interactuar con el bot enviando mensajes desde Telegram con los siguiente
 
 ## DLC
 
+
+Los DLC son extensiones independientes diseñadas para complementar y ampliar las funcionalidades de ManoliBot en la gestión y control de servidores a través de Telegram. A diferencia del conjunto principal de funcionalidades de ManoliBot, estos DLC pueden ser instalados y utilizados de manera autónoma, sin necesidad de depender del bot principal.
+
+Cada DLC proporciona características adicionales específicas, como alertas con Suricata, integración con sistemas de monitorización, automatización de tareas, entre otras funcionalidades, permitiendo a los usuarios personalizar y adaptar el bot según sus necesidades y requisitos particulares de administración de servidores.
+
 - [Alertas con Suricata](https://github.com/Scosrom/Suricata-Telegram)
