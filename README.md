@@ -38,7 +38,7 @@ Puedes interactuar con el bot enviando mensajes desde Telegram con los siguiente
 - SSH configurado en los hosts remotos para ejecutar comandos de forma remota.
 
 
-## Instalación:
+## Instalación
 
 - [Crear un bot de Telegram](Guia/crearbot.md)
 - [Instalación ManoliBot](Guia/instalacion.md)
