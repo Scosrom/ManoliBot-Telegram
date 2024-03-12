@@ -15,6 +15,9 @@ forbidden_commands_file="/opt/ManoliBot/control/forbidden_commands.txt"
 # Archivo que contiene los IDs de chat permitidos
 allowed_chat_ids_file="/opt/ManoliBot/adm/allowed_chat_ids.txt"
 
+# Archivo que contiene los hosts disponibles para ejecución remota
+hosts_file="/opt/ManoliBot/hosts/hosts.txt"
+
 # Función para enviar mensajes de respuesta
 send_message() {
     local chat_id="$1"
@@ -46,6 +49,16 @@ execute_command() {
     else
         send_message "$chat_id" "Lo siento, no tienes permiso para ejecutar comandos."
     fi
+}
+
+# Función para ejecutar comandos en hosts específicos
+execute_command_on_host() {
+    local host="$1"
+    local command="$2"
+    local result
+
+    result=$(ssh "$host" "$command" 2>&1)
+    send_message "$BOT_CHAT_ID" "Resultado de ejecución del comando en $host: $result"
 }
 
 # Obtener el último ID de actualización procesado
