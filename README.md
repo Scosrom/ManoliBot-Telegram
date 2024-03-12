@@ -34,3 +34,7 @@ Puedes interactuar con el bot enviando mensajes desde Telegram con los siguiente
 
 - [Crear un bot de Telegram](Guia/crearbot.md)
 - [Instalación ManoliBot](Guia/instalacion.md)
+
+## DLC
+
+[Alertas con Suricata](https://github.com/Scosrom/Suricata-Telegram)
