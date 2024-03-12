@@ -13,7 +13,7 @@ mensaje_file="/opt/ManoliBot/inf/MensajesManoli.txt"
 forbidden_commands_file="/opt/ManoliBot/control/forbidden_commands.txt"
 
 # Archivo que contiene los IDs de chat permitidos
-allowed_chat_ids_file="/opt/ManoliBot/allowed_chat_ids.txt"
+allowed_chat_ids_file="/opt/ManoliBot/adm/allowed_chat_ids.txt"
 
 # Función para enviar mensajes de respuesta
 send_message() {
