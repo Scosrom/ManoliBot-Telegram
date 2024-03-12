@@ -18,7 +18,8 @@ ManoliBot se instala en `/opt/ManoliBot` y consta de la siguiente estructura:
       
           - hosts.txt: Archivo que contiene los hosts disponibles para ejecución remota.
       - /adm
-      - allowed_chat_ids.txt: Archivo que contiene los IDs de chat permitidos.
+        
+          - allowed_chat_ids.txt: Archivo que contiene los IDs de chat permitidos.
     - last_update_id.txt: Archivo para guardar el último ID de actualización procesado.
 
 
