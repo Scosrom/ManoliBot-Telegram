@@ -62,4 +62,4 @@ A continuación, se muestra un ejemplo de cómo se vería el archivo:
 
 **Es importante proporcionar la clave pública de SSH al host para poder gestionarlo de manera efectiva.**
 
-4. 
+4. En el archivo `/opt/ManoliBot/inf/MensajesManoli.txt` se mantiene un registro detallado de todos los comandos ejecutados a través de ManoliBot, junto con la ID desde la cual se realizaron las ejecuciones.
