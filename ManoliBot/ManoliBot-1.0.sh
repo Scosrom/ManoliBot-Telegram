@@ -1,10 +1,13 @@
 #!/bin/bash
 
-# Reemplaza 'Escribe-tu-token' con tu token
+# Replace 'Escribe-tu-token' with your actual Telegram bot token
 TELEGRAM_TOKEN="Escribe-tu-token"
 
-# Reemplaza 'Escribe-tu-chat-id' con tu chat ID
-CHAT_ID="Escribe-tu-chat-id"
+# Replace 'Escribe-tu-chat-id' with your actual chat ID
+CHAT_ID="Escribe-tu-id-chat"
+
+# Tu ID de chat específico
+MI_CHAT_ID="Escribe-tu-id-chat"
 
 # Nombre del archivo donde se guardarán los mensajes
 mensaje_file="/opt/ManoliBot/inf/MensajesManoli.txt"
@@ -39,7 +42,7 @@ execute_command_on_host() {
     local result
 
     # Verificar si el host está en la lista de hosts disponibles
-    if grep -Fxq "$host" "/opt/ManoliBot/hosts/hosts.txt"; then
+    if grep -Fxq "$host" "/opt/ManoliBot/hosts.txt"; then
         result=$(ssh "$host" "$command" 2>&1)
         send_message "Resultado de ejecución del comando '$command' en $host: $result"
     else
@@ -74,45 +77,51 @@ while true; do
     if [[ $(jq '.result | length' <<< "$updates") -gt 0 ]]; then
         # Leer cada mensaje nuevo
         jq -c '.result[]' <<< "$updates" | while read -r update; do
-            # Obtener el tipo del mensaje
-            type=$(jq -r '.message.chat.type' <<< "$update")
+            # Obtener el ID de chat del mensaje
+            message_chat_id=$(jq -r '.message.chat.id' <<< "$update")
 
-            # Verificar si es un mensaje de chat y no una actualización de entrega
-            if [[ "$type" == "private" ]]; then
-                # Obtener el texto del mensaje
-                text=$(jq -r '.message.text' <<< "$update")
+            # Verificar si el mensaje proviene de tu ID de chat
+            if [[ "$message_chat_id" == "$MI_CHAT_ID" ]]; then
+                # Obtener el tipo del mensaje
+                type=$(jq -r '.message.chat.type' <<< "$update")
 
-                # Guardar el mensaje en el archivo
-                echo "$text" >> "$mensaje_file"
+                # Verificar si es un mensaje de chat y no una actualización de entrega
+                if [[ "$type" == "private" ]]; then
+                    # Obtener el texto del mensaje
+                    text=$(jq -r '.message.text' <<< "$update")
 
-                # Procesar el comando recibido
-                case "$text" in
-                    "/start")
-                        send_message "¡Hola! Soy un bot de Telegram. Puedes enviarme comandos para ejecutar en el servidor."
-                        ;;
-                    "/ayuda")
-                        send_message "Lista de comandos disponibles:
-/ayuda - Muestra la ayuda
-/ejecutar - Ejecutar [comando] en el servidor local
-/ejecutar_host [host] [comando] - Ejecutar [comando] en un host específico
-/start - Empezar a ejecutar comandos"
-                        ;;
-                    # Comando para ejecutar comandos en el servidor local
-                    "/ejecutar "*)
-                        command_to_execute="${text#/ejecutar }"
-                        execute_command "$command_to_execute"
-                        ;;
-                    # Comando para ejecutar comandos en hosts específicos
-                    "/ejecutar_host "*)
-                        command_to_execute="${text#/ejecutar_host }"
-                        host=$(echo "$command_to_execute" | awk '{print $1}')
-                        command=$(echo "$command_to_execute" | cut -d' ' -f2-)
-                        execute_command_on_host "$host" "$command"
-                        ;;
-                    *)
-                        # No enviar mensaje de ayuda por defecto
-                        ;;
-                esac
+                    # Guardar el mensaje en el archivo
+                    echo "$text" >> "$mensaje_file"
+
+                    # Procesar el comando recibido
+                    case "$text" in
+                        "/start")
+                            send_message "¡Hola! Soy un bot de Telegram. Puedes enviarme comandos para ejecutar en el servidor."
+                            ;;
+                        "/ayuda")
+                            send_message "Lista de comandos disponibles:
+    /ayuda - Muestra la ayuda
+    /ejecutar - Ejecutar [comando] en el servidor local
+    /ejecutar_host [host] [comando] - Ejecutar [comando] en un host específico
+    /start - Empezar a ejecutar comandos"
+                            ;;
+                        # Comando para ejecutar comandos en el servidor local
+                        "/ejecutar "*)
+                            command_to_execute="${text#/ejecutar }"
+                            execute_command "$command_to_execute"
+                            ;;
+                        # Comando para ejecutar comandos en hosts específicos
+                        "/ejecutar_host "*)
+                            command_to_execute="${text#/ejecutar_host }"
+                            host=$(echo "$command_to_execute" | awk '{print $1}')
+                            command=$(echo "$command_to_execute" | cut -d' ' -f2-)
+                            execute_command_on_host "$host" "$command"
+                            ;;
+                        *)
+                            # No enviar mensaje de ayuda por defecto
+                            ;;
+                    esac
+                fi
             fi
         done
 
