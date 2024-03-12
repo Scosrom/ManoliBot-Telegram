@@ -1,5 +1,8 @@
 # ManoliBot-Telegram
 
+![_bead78dc-a18e-4faf-9f34-589873e41f25](https://github.com/Scosrom/ManoliBot-Telegram/assets/114906778/77e0d2ca-5575-4e19-9375-3b8ccfa19dfc)
+
+
 ManoliBot es un bot de Telegram programado en Bash diseñado para simplificar la gestión y control de servidores a través de la ejecución remota de comandos. Al integrarse con la plataforma de mensajería Telegram, ManoliBot proporciona una interfaz accesible y fácil de usar que permite a los usuarios enviar comandos y recibir resultados de forma rápida y conveniente.
 
 ## Características
@@ -25,6 +28,7 @@ Puedes interactuar con el bot enviando mensajes desde Telegram con los siguiente
 - Bash (compatible con sistemas Unix/Linux).
 - Acceso a Internet para recibir y enviar mensajes desde Telegram.
 - SSH configurado en los hosts remotos para ejecutar comandos de forma remota.
+
 
 ## Instalación:
 
