@@ -27,21 +27,39 @@ ManoliBot se instala en `/opt/ManoliBot` y consta de la siguiente estructura:
 
 1. Modificar el archivo `/opt/ManoliBot/adm/allowed_chat_ids.txt`
 
+Para permitir que ciertos usuarios ejecuten comandos en tu servidor a través de ManoliBot, necesitas agregar sus IDs de chat al archivo allowed_chat_ids.txt.
+
 ```
 sudo nano /opt/ManoliBot/adm/allowed_chat_ids.txt
 ```
 
-Añadimos nuestro chatID que podemos obtener en Telegram, abriendo una conversacion con IDBot y escribiendo `/getid`
+Puedes obtener tu ID de chat enviando el mensaje /getid a IDBot en Telegram. Cada ID que agregues será un nuevo administrador que puede ejecutar comandos en tu servidor.
+
+Agrega los ID de chat como se muestra a continuación:
 
 ![image](https://github.com/Scosrom/ManoliBot-Telegram/assets/114906778/bb74a404-c601-4a63-884c-91efdebbe65a)
 
-Puedes añadir tantos ID como quieras. Cada ID que introduzcas es un nuevo administrador que puede ejecutar comandos en tu servidor, debes tener cuidado con esto. 
-
-Con varios ID`s quedaria así:
+Si deseas agregar varios ID de chat, la configuración se verá como se muestra a continuación:
 
 ![image](https://github.com/Scosrom/ManoliBot-Telegram/assets/114906778/e75befb8-226b-412a-a0c2-06da802e5390)
 
 2. Modificar el archivo `/opt/ManoliBot/control/forbidden_commands.txt`
 
+El archivo forbidden_commands.txt contiene una lista de comandos que no se permiten ejecutar en el servidor a través de ManoliBot. Puedes modificar esta lista según sea necesario.
+
+Aquí hay una lista predeterminada de comandos que se consideran peligrosos:
+
+![image](https://github.com/Scosrom/ManoliBot-Telegram/assets/114906778/ba4aa650-e19b-4624-9eca-a9786beed263)
 
 
+3. Modificar el archivo `/opt/ManoliBot/hosts/hosts.txt`
+
+El archivo hosts.txt se utiliza para enumerar los hosts que serán gestionados por ManoliBot. Puedes agregar tanto IPs como nombres de host.
+
+A continuación, se muestra un ejemplo de cómo se vería el archivo:
+![image](https://github.com/Scosrom/ManoliBot-Telegram/assets/114906778/0ca53d5e-cfbd-4673-9a42-61b5653b80ca)
+
+
+**Es importante proporcionar la clave pública de SSH al host para poder gestionarlo de manera efectiva.**
+
+4. 
