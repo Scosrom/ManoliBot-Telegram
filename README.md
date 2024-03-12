@@ -37,4 +37,4 @@ Puedes interactuar con el bot enviando mensajes desde Telegram con los siguiente
 
 ## DLC
 
-[Alertas con Suricata](https://github.com/Scosrom/Suricata-Telegram)
+- [Alertas con Suricata](https://github.com/Scosrom/Suricata-Telegram)
