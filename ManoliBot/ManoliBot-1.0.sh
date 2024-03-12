@@ -85,13 +85,18 @@ while true; do
                 # Obtener el texto del mensaje
                 text=$(jq -r '.message.text' <<< "$update")
 
-                # Guardar el mensaje en el archivo
-                echo "$text" >> "$mensaje_file"
+                # Guardar el mensaje en el archivo junto con el ID del chat
+                echo "ID de Chat: $chat_id" >> "$mensaje_file"
+                echo "Mensaje: $text" >> "$mensaje_file"
 
                 # Procesar el comando recibido
                 case "$text" in
                     "/start")
-                        send_message "$chat_id" "¡Hola! Soy un bot de Telegram. Puedes enviarme comandos para ejecutar en el servidor."
+                        if is_chat_id_allowed "$chat_id"; then
+                            send_message "$chat_id" "¡Hola! Soy un bot de Telegram. Puedes enviarme comandos para ejecutar en el servidor."
+                        else
+                            send_message "$chat_id" "Lo siento, no tienes permiso para ejecutar el comando /start."
+                        fi
                         ;;
                     "/ayuda")
                         send_message "$chat_id" "Lista de comandos disponibles:
