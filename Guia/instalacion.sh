@@ -7,6 +7,7 @@ if ! command -v git &> /dev/null; then
     sudo apt install git -y
 fi
 
+# Instalar curl
 sudo apt install curl -y
 # Clonar el repositorio de ManoliBot desde GitHub
 echo "Clonando el repositorio de ManoliBot desde GitHub..."
@@ -33,6 +34,7 @@ sudo chmod 777 /opt/ManoliBot/ManoliBot-1.0.sh
 sudo chmod 777 /opt/ManoliBot/inf/MensajesManoli.txt
 sudo chmod 777 /opt/ManoliBot/control/forbidden_commands.txt
 sudo chmod 777 /opt/ManoliBot/hosts/hosts.txt
+sudo chmod 777 /opt/ManoliBot/adm/allowed_chat_ids.txt
 
 # Crear el servicio systemd para ManoliBot
 echo "Creando el servicio systemd para ManoliBot..."
