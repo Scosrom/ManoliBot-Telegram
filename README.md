@@ -42,7 +42,7 @@ Puedes interactuar con el bot enviando mensajes desde Telegram con los siguiente
 
 - [Crear un bot de Telegram](Guia/crearbot.md)
 - [Instalación ManoliBot](Guia/instalacion.md)
-- [Configuración](Guia/configuracion.md)
+- [Configuración de ManoliBot](Guia/configuracion.md)
 
 ## DLC
 
