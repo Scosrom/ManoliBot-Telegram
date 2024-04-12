@@ -53,6 +53,7 @@ Los DLC son extensiones independientes diseñadas para complementar y ampliar la
 Cada DLC proporciona características adicionales específicas, permitiendo a los usuarios personalizar y adaptar el bot según sus necesidades y requisitos particulares de administración de servidores.
 
 - [Alertas con Suricata](https://github.com/Scosrom/Suricata-Telegram)
+- [Alertas de ssh](Guia/instalacionSSH.md)
 
 ## Licencia
 
