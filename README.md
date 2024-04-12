@@ -47,6 +47,7 @@ Puedes interactuar con el bot enviando mensajes desde Telegram con los siguiente
 
 ## DLC
 
+### Alertas
 
 Los DLC son extensiones independientes diseñadas para complementar y ampliar las funcionalidades de ManoliBot en la gestión y control de servidores a través de Telegram. Pueden ser instalados y utilizados de manera autónoma, sin necesidad de depender del bot principal.
 
