@@ -11,9 +11,9 @@ Copiamos el siguiente script y lo pegamos en el archivo **/opt/ManoliBot/alertas
 #!/bin/bash
 
 # Token del bot de Telegram
-TELEGRAM_TOKEN="7142938203:AAFbEEpR7eSYMr6tNoDsGd_rz1r6mmFnTAs"
+TELEGRAM_TOKEN="Escribe-tu-token"
 # ID del chat de Telegram
-CHAT_ID="6485900541"
+CHAT_ID="Escribe-tu-id"
 
 # Ruta al archivo temporal
 TMP_FILE="/opt/ManoliBot/tmp.txt"
